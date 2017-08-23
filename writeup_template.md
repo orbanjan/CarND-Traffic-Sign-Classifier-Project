@@ -97,26 +97,24 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used an AdamOptimizer. Batch size was = 256 and the number of epochs = 30. Learning rate was = 0.001
+In AWS Instance I used epochs =100 and with different learning rates from 0.1 to 0.0001
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 0.998
+* validation set accuracy of 0.939 
+* test set accuracy of 0.931
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
 If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+* What architecture was chosen? LeNet 5 with RGB. Originally I choosed grayscale image but accuracy was very low.
+* How was the architecture adjusted and why was it adjusted? I choosed 2 dropout at 0.5 rate at the 2 fully connected layer because there was a big differernce between validation and testing due to overfitting.
+Which parameters were tuned? How were they adjusted and why? keep_probability was between 0.5-0.8 -> 0.7 with reasonable good results.
+* Why did you believe it would be relevant to the traffic sign application? It could be trained well within reasonale time with huge dataset.
+* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well? Training accuracy was close to 1.0 and the testing and validation was very close > 0.93.
  
 
 ### Test a Model on New Images
