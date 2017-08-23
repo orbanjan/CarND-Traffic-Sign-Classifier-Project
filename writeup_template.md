@@ -115,7 +115,14 @@ If a well known architecture was chosen:
 Which parameters were tuned? How were they adjusted and why? keep_probability was between 0.5-0.8 -> 0.7 with reasonable good results.
 * Why did you believe it would be relevant to the traffic sign application? It could be trained well within reasonale time with huge dataset.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well? Training accuracy was close to 1.0 and the testing and validation was very close > 0.93.
+
+UPDATE: Plc chek my Copy7 notebook which was a modified LeNet based on this article:
+Multi-Column Deep Neural Network for Traffic Sign Classification
+Dan Cireşan, Ueli Meier, Jonathan Masci and Jürgen Schmidhuber
+IDSIA - USI - SUPSI — Galleria 2, Manno - Lugano 6928, Switzerland
  
+Validation accuracy reached = 0.961 by adding 1 more conv layer + adding much more channels into conv layers.
+Further improvement is only after graysale and OpenCV image enhancements probaly would yield >.98
 
 ### Test a Model on New Images
 
