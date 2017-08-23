@@ -53,7 +53,7 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data distribution looks like for the train, test, validation set. It seems that they are from the same distrubution. Some trafic sign occurance are very high compering to others (2000 vs 100) which indicates that some augmentation might help especially on low-occurancy items.
 
 ![alt text][image1]
 
